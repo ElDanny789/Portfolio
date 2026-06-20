@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lucid Terror</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="LucidTerror.css">
+  </head>
+
+  <body>
+    <!-- fixed navbar -->
+    <header>
+      <nav class="nav-title desktop">
+        <ul>
+          <li><p class="logo">Daniel Castro</p></li>
+          <li><a href="index.html" class="nav-hide">Home</a></li>
+          <li><a href="index.html#About-me" class="nav-hide">About Me</a></li>
+          <li><a href="projects.html" class="nav-hide">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- project name section -->
+    <section id="LucidTerror">
+      <div class="bg-image">
+        <img src="images/winery.png" alt="background image of a project">
+      </div>
+      
+      <div class="name-description">
+        <h1>The Winery</h1>
+        <h2>Interactive Simulation</h2>
+      </div>
+          
+          
+     
+        
+     
+
+      <a href="https://youtu.be/kFrHS2vgnAY?si=lFlSPJoTHDjMdhQx" class="video-link" target="_blank">Watch video walkthrough</a>
+      <a href="#Project-Description" class="arrow-button">
+        <img src="images/arrow.png" class="arrow" alt="arrow to go to the about me section">
+      </a>
+    </section>
+
+     <!-- about the project -->
+    <section id="Project-Description">
+      <div class="about-section">
+        <h3>Project Overview</h3>
+        <div class="about-image">
+          <img src="images/winery simulator.png" alt="winery simulator start screen" loading="lazy" width="400" height="auto">
+        </div>
+        <div class="about-text-overview">
+          <p>
+            The “Winery Interactive Simulation” was an individual academic project in which I had to create a simulation to show the process of an activity using Java. The activity I chose was how to make wine using the ancient process.  The major difficulty of this project was that I had to use recursion in the simulation. I overcame this difficulty by using a recursive function to draw moths rotated at a different angle until the condition was fulfilled. Another difficulty was using Perlin noise in the project. I decided to use Perlin noise twice to give a sense that the action was being made such as getting water on from the well and in the fermentation process.  Having classes for each object the user has to interact with in the simulation made it easier to organize the code and to make the functions for when the objects were clicked or dragged to make an action with another project. For example, the user must drag the shovel to the plant pot. So when the class object of the shovel touched the class object of the plant pot it will trigger an interaction between those two classes.
+          </p>
+        </div>
+      
+        <h3>Interactions</h3>
+      
+        
+        <div class="about-text">
+         
+          <p>  
+            There are two types of interactions that the user can do to follow the simulation. These two interactions are dragging and clicking instances of objects. For the dragging interaction, I created a bounding box on every object and checked if the two bounding boxes were colliding with each other. 
+          </p>
+        </div>
+
+        <div class="sensor-image">
+          
+          <img src="images/winery interaction one.png" alt="code about the touch sensor" loading="lazy" width="400" height="auto">
+          <img src="images/winery gif one.gif" alt="code about the touch sensor" loading="lazy" width="400" height="auto">
+        </div>
+
+        
+
+        <div class = "about-text">
+          For clicking interaction, I checked if the cursor's position is inside the object's bounding box and if the user clicks inside.  
+
+        </div>
+
+        <div class="sensor-image">
+          
+
+          <img src="images/winery interaction two.png" alt="code about the light sensor" loading="lazy" width="400" height="auto">
+          <img src="images/winery gif two.gif" alt="code about the light sensor" loading="lazy" width="400" height="auto">
+          
+        </div>
+
+        <h3>Perling Noise</h3>
+
+        <div class = "about-text">
+          Used Perlin Noise to give animation effects to two events in the simulation. The first is when the user is getting water from the well mimicking a splash effect and the second is when the wine is in the fermenting process giving an effect that it has a string smell. 
+
+        </div>
+
+        <div class="sensor-image">
+          
+
+          <img src="images/winery perling noise.png" alt="code about the temperature sensor" loading="lazy" width="400" height="auto">
+          <img src="images/winery perling noise gif.gif" alt="code about the temperature sensor" loading="lazy" width="400" height="auto">
+          
+        </div>
+
+        <h3>Recursion</h3>
+
+        <div class = "about-text">
+          Implemented a recursive function to simplify the code by having one recursive function instead of having multiple objects of the same class and drawing them. The recursive function is used to draw the moths in a circle by changing the angle to the center. 
+
+
+        </div>
+
+        <div class="sensor-image">
+          
+
+          <img src="images/winery recursion.png" alt="code about the buttons" loading="lazy" width="400" height="auto">
+          <img src="images/winery recursion two.png" alt="code about the buttons" loading="lazy" width="400" height="auto">
+          
+        </div>
+      
+        <h3>Simulation  States</h3>
+      
+        
+        <div class="about-text">
+          <p>
+            After each interaction the simulation changes to a different state, this way I control what objects can be clicked in each state to prevent the user from clicking another object. Also, the objects and background change depending on the state the simulation is in.  
+            
+            This image is a part of the paintComponent() function which draws the objects and backgrounds depending on the state. 
+          </p>
+        </div>
+
+        <div class="about-image">
+          <img src="images/winery simulation states one.png" alt="image of the circuit" loading="lazy" width="400" height="auto">
+          
+        </div>
+
+        <div class="about-text">
+          <p>
+            These images are a part of the actionPerformed() function and the mouseClicked() function which check in which state the simulation is in and then checks if the interaction for that state is completed before moving on to the next state. 
+          </p>
+        </div>
+
+         <div class="about-image">
+          
+          <img src="images/winery simulation states two.png" alt="image of the circuit" loading="lazy" width="400" height="auto">
+          <img src="images/winery simulation states three.png" alt="image of the circuit" loading="lazy" width="400" height="auto">
+          
+        </div>
+
+        <h3>Visual Elements</h3>
+      
+        
+        <div class="about-text">
+          <p>
+            Drew all the visual elements of the simulation on the application Clip Studio Paint achieving a proper style for the topic of the program. Having different backgrounds such as the outside daytime, outside night,  and inside the house made the transitions and animations between places more effective and easy to follow.  
+          </p>
+        </div>
+
+        <div class="about-image">
+          <img src="images/winery day background.png" alt="image of the circuit" loading="lazy" width="400" height="auto">
+          <img src="images/winery night background.png" alt="image of the circuit" loading="lazy" width="400" height="auto">
+          
+        </div>
+        <div class="about-image">
+          <img src="images/winery cellar one.png" alt="image of the circuit" loading="lazy" width="400" height="auto">
+          <img src="images/winery cellar two.png" alt="image of the circuit" loading="lazy" width="400" height="auto">
+          
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>

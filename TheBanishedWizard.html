@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lucid Terror</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="LucidTerror.css">
+  </head>
+
+  <body>
+    <!-- fixed navbar -->
+    <header>
+      <nav class="nav-title desktop">
+        <ul>
+          <li><p class="logo">Daniel Castro</p></li>
+          <li><a href="index.html" class="nav-hide">Home</a></li>
+          <li><a href="index.html#About-me" class="nav-hide">About Me</a></li>
+          <li><a href="projects.html" class="nav-hide">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- project name section -->
+    <section id="LucidTerror">
+      <div class="bg-image">
+        <img src="images/banished wizard bg.png" alt="background image of a project">
+      </div>
+      
+      <div class="name-description">
+        <h1>The Banished Wizard</h1>
+        <h2>Platformer 2D Game</h2>
+      </div>
+          
+          
+     
+        
+     
+
+      <a href="https://youtu.be/2ED1Gyo87dQ" class="video-link" target="_blank">Watch video walkthrough</a>
+      <a href="#Project-Description" class="arrow-button">
+        <img src="images/arrow.png" class="arrow" alt="arrow to go to the about me section">
+      </a>
+    </section>
+
+     <!-- about the project -->
+    <section id="Project-Description">
+      <div class="about-section">
+        <h3>Project Overview</h3>
+        <div class="about-image">
+          <img src="images/intro banished wizard.png" alt="winery simulator start screen" loading="lazy" width="400" height="auto">
+        </div>
+        <div class="about-text-overview">
+          <p>
+            “The Banished Wizard” was an academic individual project in which I had to create a video game using Processing. The instructions for this project were to code any video game from scratch. I chose to build a platformer video game.
+          </p>
+        </div>
+      
+        <h3>Character actions</h3>
+      
+        
+        <div class="about-text">
+         
+          <p>  
+           The way the character moves is with boolean variables if the player presses the right, left, or up arrow. The left and right arrow makes the character walk and the up arrow makes the character jump. The most difficult movement to code is when the character because when the character was landing it would go through the platform instead of landing on it. I fixed this issue by using an if statement to see if the character is jumping, then a function to move to move the character down representing it is falling. To get the landing correctly I created a function that takes the platform object and sets the Y position of the character to match the position of the platform and stops its falling velocity.  
+          </p>
+
+          <p>
+            The following code demonstrates the logic of the character’s movement.
+          </p>
+        </div>
+
+        <div class="sensor-image">
+          
+          <img src="images/Character movements code one.png" alt="code about the touch sensor" loading="lazy" width="400" height="auto">
+          <img src="images/Character movements code two.png" alt="code about the touch sensor" loading="lazy" width="400" height="auto">
+        </div>
+        <div class="sensor-image">
+          
+          <img src="images/Character jumping code.png" alt="code about the touch sensor" loading="lazy" width="300" height="auto">
+          <img src="images/character jumping gif.gif" alt="code about the touch sensor" loading="lazy" width="400" height="auto">
+        </div>
+
+        
+
+        <div class = "about-text">
+          <p>
+            For the character’s action of attacking, I created a new object for the projectiles the character shoots. Using boolean variables to detect if the character was attacking by pressing the space bar, and another one to make the projectile “alive” made it easier to control the projectile’s collision function and its status.
+          </p>
+          <p>
+            The following code shows the logic behind the character’s attacking function and the projectile’s properties.
+          </p>  
+
+        </div>
+
+        <div class="sensor-image">
+          
+
+          <img src="images/attacking one.png" alt="code about the light sensor" loading="lazy" width="400" height="auto">
+          <img src="images/attacking two.png" alt="code about the light sensor" loading="lazy" width="400" height="auto">
+          
+        </div>
+        <div class="sensor-image">
+          
+
+          <img src="images/attacking three.png" alt="code about the light sensor" loading="lazy" width="400" height="auto">
+          <img src="images/attacking four.png" alt="code about the light sensor" loading="lazy" width="400" height="auto">
+          
+        </div>
+        <div class="sensor-image">
+          
+
+          <img src="images/attacking gif.gif" alt="code about the light sensor" loading="lazy" width="400" height="auto">
+          
+          
+        </div>
+
+
+
+       
+
+        <div class = "about-text">
+          The character can also take damage when it collides with an enemy. For this interaction, I made a function that checks if the distance between the character and the enemy is less than the size of the images combined, this way it checks if the images collide with each other. The code to check if the character touches an enemy is divided by the type of enemy and it applies the same logic to every enemy. 
+
+        </div>
+
+        <div class="sensor-image">
+          
+
+          <img src="images/character damage one.png" alt="code about the temperature sensor" loading="lazy" width="400" height="auto">
+          <img src="images/character damage gif.gif" alt="code about the temperature sensor" loading="lazy" width="400" height="auto">
+          
+        </div>
+
+        <h3>Enemy interactions</h3>
+
+        <div class = "about-text">
+          <p>
+            The different enemies in the game have the same interactions which are collisions with the character’s projectile and with the character.  When colliding with the character’s attack the enemies take damage and disappear. The Golem and the King, the character needs to attack several times to clear the level. When the enemies collide with the character, the character loses a life and the enemies touched will disappear. Differently, when the character collides with the Golem or the King, the player loses instantly. 
+          </p>
+          <p>
+            The only two enemies that have different interactions are the Golem who attacks with rocks and the King in the last level who moves randomly through the screen. The golem’s attack is rocks that move through the screen and bounce every time they collide with any side of the screen. What makes the King different from the rest of the enemies is that every time it bounces from any side of the screen its velocity increases making it harder to beat.
+          </p>
+          <p>
+            The following codes explain the logic behind these collisions and interactions.
+          </p>
+          <p>
+            Collision between the character’s projectiles and enemies.
+          </p>
+        </div>
+
+        <div class="sensor-image">
+          
+
+          <img src="images/check bullet function.png" alt="code about the buttons" loading="lazy" width="400" height="auto">
+          <img src="images/bullet enemy gif.gif" alt="code about the buttons" loading="lazy" width="400" height="auto">
+          
+        </div>
+      
+        
+      
+        
+        <div class="about-text">
+          <p>
+            Collision between the character and the Golem, 
+          </p>
+        </div>
+
+        <div class="about-image">
+          <img src="images/character and golem.png" alt="image of the circuit" loading="lazy" width="400" height="auto">
+          <img src="images/character and golem gif.gif" alt="image of the circuit" loading="lazy" width="400" height="auto">
+          
+        </div>
+
+        <div class="about-text">
+          <p>
+            Collision between the Golem’s attack with the walls, and the King with the walls.
+          </p>
+        </div>
+
+        <div class="about-image">
+          <img src="images/check walls function.png" alt="image of the circuit" loading="lazy" width="400" height="auto">        
+        </div>
+
+        <div class="about-image">
+          <img src="images/walls golem gif.gif" alt="image of the circuit" loading="lazy" width="400" height="auto">
+          <img src="images/king walls gif.gif" alt="image of the circuit" loading="lazy" width="400" height="auto">        
+        </div>
+          
+        
+      </div>
+    </section>
+
+  </body>
+</html>

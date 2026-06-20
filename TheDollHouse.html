@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lucid Terror</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="LucidTerror.css">
+  </head>
+
+  <body>
+    <!-- fixed navbar -->
+    <header>
+      <nav class="nav-title desktop">
+        <ul>
+          <li><p class="logo">Daniel Castro</p></li>
+          <li><a href="index.html" class="nav-hide">Home</a></li>
+          <li><a href="index.html#About-me" class="nav-hide">About Me</a></li>
+          <li><a href="projects.html" class="nav-hide">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- project name section -->
+    <section id="LucidTerror">
+      <div class="bg-image">
+        <img src="images/the doll house.jpg" alt="background image of a project">
+      </div>
+      
+      <div class="name-description">
+        <h1>The Doll House</h1>
+        <h2>Interactive System</h2>
+      </div>
+          
+          
+     
+        
+     
+
+      <a href="https://youtube.com/shorts/oZAHsWEa1vw?feature=share" class="video-link" target="_blank">Watch video walkthrough</a>
+      <a href="#Project-Description" class="arrow-button">
+        <img src="images/arrow.png" class="arrow" alt="arrow to go to the about me section">
+      </a>
+    </section>
+
+     <!-- about the project -->
+    <section id="Project-Description">
+      <div class="about-section">
+        <h3>Project Overview</h3>
+        <div class="about-image">
+          <img src="images/housedoll overview.jpg" alt="lucid terror poster" loading="lazy" width="400" height="auto">
+        </div>
+        <div class="about-text-overview">
+          <p>
+            “The Doll House” was an academic group project in which we had to create an interactive embedded system using sensors and servomotors. The project has different interactions such as detecting touch with a touch sensor, changes in temperature and light, and actions when someone presses a button. During this project, I was the lead programmer and circuit developer.
+          </p>
+        </div>
+      
+        <h3>Interactions</h3>
+      
+        
+        <div class="about-text">
+         <h4>Touch Sensor</h4>
+          <p>  
+            The touch sensor functions with the servomotor. I coded the sensor to make the servomotor move the door at 45 degrees when the sensor is being touched. The door will remain open until the user releases the touch sensor, then the servomotor will move to the original position. 
+          </p>
+        </div>
+
+        <div class="sensor-image">
+          
+          <img src="images/touch sensor code.png" alt="code about the touch sensor" loading="lazy" width="400" height="auto">
+        </div>
+
+        <h4>Light Sensor</h4>
+
+        <div class = "about-text">
+          The light sensor controls the background of the project, if the the value detected by the sensor reaches a certain value the background changes from a day background to a night background. I used serial communication between Arduino and processing the values are passed to Processing to then check with the threshold value. Also inside the house, three LEDs turn on and off depending if the sensor is detecting light or not. 
+
+        </div>
+
+        <div class="sensor-image">
+          
+
+          <img src="images/light sensor code one.png" alt="code about the light sensor" loading="lazy" width="400" height="auto">
+          <img src="images/light sensor code two.png" alt="code about the light sensor" loading="lazy" width="400" height="auto">
+          
+        </div>
+
+        <h4>Temperature Sensor</h4>
+
+        <div class = "about-text">
+          The temperature sensor also controls the background changing between three different seasons which are summer, spring, and winter. I first store the temperature value in a variable, map it, and send it to Processing. In Processing I used if statements and boolean functions to decide which background to display depending on the temperature and light sensor. 
+
+        </div>
+
+        <div class="sensor-image">
+          
+
+          <img src="images/temp sensor code one.png" alt="code about the temperature sensor" loading="lazy" width="400" height="auto">
+          <img src="images/temp sensor code two.png" alt="code about the temperature sensor" loading="lazy" width="400" height="auto">
+          
+        </div>
+
+        <h4>Buttons</h4>
+
+        <div class = "about-text">
+          There are three buttons that the user can press, and each one of them triggers an animation. I coded first to detect the state of the button in Arduino and send it to Processing. In Processing check if the button is pressed and play the corresponding animation. 
+
+
+        </div>
+
+        <div class="sensor-image">
+          
+
+          <img src="images/button one.png" alt="code about the buttons" loading="lazy" width="400" height="auto">
+          <img src="images/button one.png" alt="code about the buttons" loading="lazy" width="400" height="auto">
+          
+        </div>
+      
+        <h3>The Circuit</h3>
+      
+        
+        <div class="about-text">
+          <p>
+            The circuit includes the Arduino, touch sensor, light sensor, temperature sensor, breadboard, and three buttons. I connected every element making sure they were working properly. 
+          </p>
+        </div>
+
+        <div class="about-image">
+          <img src="images/circuit one.jpg" alt="image of the circuit" loading="lazy" width="400" height="auto">
+          <img src="images/circuit two.jpg" alt="image of the house" loading="lazy" width="400" height="auto">
+        </div>
+      </div>
+    </section>
+
+  </body>
+</html>

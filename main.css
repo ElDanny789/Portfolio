@@ -1,0 +1,231 @@
+/*I used chatGPT to help me put the text in front of the image and for the animation effect in the projects page.*/
+/* ——————————————————————————————
+   BASE STYLES
+   —————————————————————————————— */
+body {
+  background: rgb(5, 5, 5);
+  color: white;
+  font-family: 'DMSans', sans-serif;
+  font-size: large;
+  margin: 0;
+  padding-top: 0;
+}
+
+/* ——————————————————————————————
+   HERO / NAME SECTION
+   —————————————————————————————— */
+#Name {
+  
+  width: 100%;
+  height: 100vh;               
+  overflow: hidden;
+}
+
+.bg-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* background image covers entire section */
+.bg-image img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* wrapper for both headings */
+.name-description {
+  position: absolute;
+  top: 50%;                    
+  left: 5rem;                  
+  transform: translateY(-50%);
+  z-index: 100;
+  color: white;
+}
+
+.name-description h1 {
+  margin: 0;
+  font-size: 7rem;
+}
+
+.name-description h3 {
+  margin: 0.5rem 0 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+#Name .project-link {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  z-index: 100;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#Name .project-link:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.arrow-button {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  z-index: 100;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.arrow-button:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.arrow {
+  width: 3rem;     
+  height: auto;
+}
+
+/* ——————————————————————————————
+   NAVBAR
+   —————————————————————————————— */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgb(56, 56, 56);
+  z-index: 1000;
+}
+
+.nav-title {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-title ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  align-items: center;
+}
+
+.nav-title li:first-child {
+  margin-right: auto;
+}
+
+.logo {
+  font-family: 'edwardian', sans-serif;
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 0;
+}
+
+.nav-title a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+.nav-title a:hover {
+  background-color: #000000;
+  border-radius: 0.25;
+}
+
+/* ——————————————————————————————
+   ABOUT ME SECTION
+   —————————————————————————————— */
+#About-me {
+  padding: 4rem 5rem;
+  color: white;
+}
+
+#About-me h3 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+#About-me .about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+
+#About-me .about-image img {
+  width: 100%;
+  max-width: 25rem; 
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+#About-me .about-text {
+  max-width: 50rem; 
+  padding: 0 1rem;
+}
+
+
+#About-me .about-text p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contact-info {
+  margin-top: -2.5rem;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+  .name-description {
+    left: 2rem;
+    text-align: left;
+  }
+
+  .name-description h1 {
+    font-size: 4rem;
+  }
+
+  .name-description h3 {
+    font-size: 1.25rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .arrow {
+    width: 2rem;
+  }
+
+  .nav-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-title a {
+    padding: 0.5rem 0;
+  }
+}

@@ -1,0 +1,94 @@
+.project-container {
+  max-width: 63rem;
+  margin: 4rem auto;
+  padding: 1rem;
+}
+
+.project-card {
+  display: grid;
+  min-height: 7rem;
+  grid-template-columns: 1fr 2fr; 
+  gap: 2rem;
+  background-color: #111;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 0.6rem rgba(0,0,0,0.5);
+  align-items: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image styling */
+.project-card img {
+  max-width: 13rem;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+
+/* Text section */
+.project-info {
+  color: #fcebbd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.project-info h2 {
+  margin-top: 0;
+  font-size: 1.8rem;
+  color: #E3D095;
+}
+
+.project-info p {
+  margin: 0.5rem 0 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.project-info ul {
+  padding-left: 1.2rem; 
+  margin-top: 0;
+  margin-bottom: 1rem;
+  list-style-type: disc; 
+}
+
+.project-info li {
+  margin-bottom: 0.4rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.project-info a {
+  color: #E3D095;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.2s ease;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.project-info a:hover {
+  color: #fcebbd;
+}
+
+.project-card:hover {
+  transform: scale(1.03); 
+  box-shadow: 0 0 1.2rem rgba(227, 208, 149, 0.4); 
+}
+
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-link:hover .project-card {
+  transform: scale(1.03);
+  box-shadow: 0 0 1.2rem rgba(227, 208, 149, 0.4);
+  cursor: pointer;
+}
